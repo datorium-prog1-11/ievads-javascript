@@ -41,3 +41,61 @@ Pareiza funkcijas definīcija Python:
 def myFunction():
     pass
 ```
+
+---
+
+## Kā var defiēt JavaScript mainīgo un piešķirt tam vērtību?
+
+a. `carName = 'Audi';`
+b. `let carName = 'Audi';`
+c. `variable carName = 'Audi';`
+d. `def carName = 'Audi';`
+
+Pareizā atbilde ir `b`. JavaScript mēs definējam mainīgos ar `let` vai `const` atslēgvārdu, tam seko nosaukums, vienādības zīme un mainīgā vērtība. Rindu beidzam ar semikolu.
+
+### Kāpēc `a` un `d` nav pareizi?
+
+Tie izskatās pēc definīcijām `Python` valodā.
+- `a` ir līdzīgs mainīgā definīcijai, vienīgi, `Python` mēs nebeidam rindu ar semikolu.
+
+```python
+carName = 'Audi'
+```
+
+- `d` ir līdzīgs funkcijas definīcijai `Python`, jo tiek izmantots atslēgvārds `def`. JS gan tas neko nenozīmē.
+
+```python
+def carName():
+    pass
+```
+
+### Kāpēc `c` nav pareizs?
+
+JavaScript nav tāda atslēgvārda `variable`. Līdz ar to šī izteiksme ir vienkārši nepareiza.
+
+
+## Pareizs koda fragments ar skaidrojumiem:
+
+
+```html
+<html>
+    <body>
+        <p>Hello</p>
+
+        <script>
+            //              0,        1      2
+            let colors = ['black', 'blue', 'red'];
+            // Mēs definējam mainīgo JS ar `let`
+            let i = 0;
+
+            // `i++` ir tas pats, kas `i = i + 1`
+            while (colors[i]) {  // i = 3; colors[i] = undefined
+                if (colors[i] == 'blue') {
+                    console.log('My favorite color is', colors[i]);
+                }
+                i++; // i = 3
+            }
+        </script>
+    </body>
+</html>
+```
